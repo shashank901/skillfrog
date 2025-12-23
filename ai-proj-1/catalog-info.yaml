@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ai-proj-1-personal-finance-advisor
+  description: >
+    AI-driven personal finance advisor that analyses transactions, spending patterns, and user goals to
+    produce savings and investment recommendations with LangChain memory and deterministic fallbacks.
+  tags:
+    - fastapi
+    - langchain
+    - streamlit
+    - sqlite
+  links:
+    - url: https://github.com/co-intel-labs/hol-projects/tree/main/ai-proj-1
+      title: Repository
+      icon: github
+spec:
+  type: service
+  owner: ai-labs
+  lifecycle: experimental
+  system: ai-labs-portfolio

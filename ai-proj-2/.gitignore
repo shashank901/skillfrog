@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.env
+reviews.db
+streamlit.db
+.pytest_cache/

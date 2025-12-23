@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  api:
+    build: .
+    ports:
+      - "8100:8100"
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./reviews.db:/app/reviews.db
+    command: uvicorn main:app --host 0.0.0.0 --port 8100
+
+  dashboard:
+    build: .
+    depends_on:
+      - api
+    environment:
+      - API_BASE=http://api:8100
+    command: streamlit run streamlit_app.py --server.port=8502 --server.address=0.0.0.0
+    ports:
+      - "8502:8502"
+    volumes:
+      - ./data:/app/data

@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  api:
+    build: .
+    ports:
+      - "8300:8300"
+    env_file:
+      - .env
+    command: uvicorn main:app --host 0.0.0.0 --port 8300
+    volumes:
+      - ./data:/app/data
+      - ./research_reports.db:/app/research_reports.db
+
+  streamlit:
+    build: .
+    depends_on:
+      - api
+    environment:
+      - API_BASE=http://api:8300
+    command: streamlit run streamlit_app.py --server.port=8504 --server.address=0.0.0.0
+    ports:
+      - "8504:8504"
+    volumes:
+      - ./data:/app/data

@@ -1,0 +1,23 @@
+user_id,name,income_monthly,risk_tolerance,goal_name,goal_target,goal_timeline_months,category,type,amount,month
+1,Amelia Lopez,7200,moderate,Emergency Fund,12000,12,Rent,expense,2100,2025-01
+1,Amelia Lopez,7200,moderate,Emergency Fund,12000,12,Groceries,expense,620,2025-01
+1,Amelia Lopez,7200,moderate,Emergency Fund,12000,12,Transportation,expense,280,2025-01
+1,Amelia Lopez,7200,moderate,Emergency Fund,12000,12,Entertainment,expense,350,2025-01
+1,Amelia Lopez,7200,moderate,Emergency Fund,12000,12,Income,income,7200,2025-01
+1,Amelia Lopez,7200,moderate,Emergency Fund,12000,12,Investments,expense,500,2025-01
+1,Amelia Lopez,7200,moderate,Emergency Fund,12000,12,Dining Out,expense,420,2025-01
+1,Amelia Lopez,7200,moderate,Emergency Fund,12000,12,Subscriptions,expense,95,2025-01
+2,Jamal Singh,5400,conservative,Vacation Fund,5000,10,Rent,expense,1800,2025-01
+2,Jamal Singh,5400,conservative,Vacation Fund,5000,10,Groceries,expense,540,2025-01
+2,Jamal Singh,5400,conservative,Vacation Fund,5000,10,Utilities,expense,260,2025-01
+2,Jamal Singh,5400,conservative,Vacation Fund,5000,10,Childcare,expense,700,2025-01
+2,Jamal Singh,5400,conservative,Vacation Fund,5000,10,Income,income,5400,2025-01
+2,Jamal Singh,5400,conservative,Vacation Fund,5000,10,Debt Payments,expense,450,2025-01
+2,Jamal Singh,5400,conservative,Vacation Fund,5000,10,Entertainment,expense,240,2025-01
+3,Sophia Chen,9500,aggressive,Home Down Payment,60000,24,Mortgage,expense,2600,2025-01
+3,Sophia Chen,9500,aggressive,Home Down Payment,60000,24,Groceries,expense,780,2025-01
+3,Sophia Chen,9500,aggressive,Home Down Payment,60000,24,Travel,expense,540,2025-01
+3,Sophia Chen,9500,aggressive,Home Down Payment,60000,24,Investments,expense,1200,2025-01
+3,Sophia Chen,9500,aggressive,Home Down Payment,60000,24,Income,income,9500,2025-01
+3,Sophia Chen,9500,aggressive,Home Down Payment,60000,24,Wellness,expense,320,2025-01
+3,Sophia Chen,9500,aggressive,Home Down Payment,60000,24,Subscriptions,expense,120,2025-01

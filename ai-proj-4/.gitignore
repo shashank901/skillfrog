@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.env
+quality_reports.db
+streamlit.db
+.ipynb_checkpoints/

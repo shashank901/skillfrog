@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ai-proj-2-code-reviewer
+  description: >
+    Automated Python code reviewer that combines heuristic checks with LangChain + OpenAI analysis,
+    integrates with GitHub for snippet retrieval, and returns structured refactoring suggestions.
+  tags:
+    - fastapi
+    - langchain
+    - github
+    - sqlite
+  links:
+    - url: https://github.com/co-intel-labs/hol-projects/tree/main/ai-proj-2
+      title: Repository
+      icon: github
+spec:
+  type: service
+  owner: ai-labs
+  lifecycle: experimental
+  system: ai-labs-portfolio

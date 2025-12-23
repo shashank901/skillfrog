@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    ports:
+      - "${PORT:-8000}:8000"
+    volumes:
+      - ./data:/app/data
+      - ./storage:/app/storage
+    env_file:
+      - .env
+    environment:
+      ENVIRONMENT: docker
+      FRONTEND_ORIGIN: "*"
+    restart: unless-stopped

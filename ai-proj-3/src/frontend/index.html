@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Telecom Support RAG Agent</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="sidebar">
+        <h1>Customer Support Agent</h1>
+        <p class="tagline">
+          Ask policy and FAQ questions powered by Retrieval-Augmented Generation.
+        </p>
+        <div class="status">
+          <span class="indicator" id="health-indicator"></span>
+          <span id="health-text">Checking service...</span>
+        </div>
+        <div class="ingest">
+          <h2>Knowledge Base</h2>
+          <label for="ingest-dir">Source directory</label>
+          <input id="ingest-dir" type="text" placeholder="data/sample_faqs" />
+          <button id="ingest-btn">Run Ingestion</button>
+          <pre id="ingest-output"></pre>
+        </div>
+      </section>
+      <section class="chat">
+        <div id="messages"></div>
+        <form id="chat-form">
+          <textarea
+            id="question"
+            rows="3"
+            placeholder="Ask about roaming, billing, device policies..."
+          ></textarea>
+          <div class="actions">
+            <button type="submit" id="send">Send</button>
+            <span id="latency"></span>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script src="/static/app.js" type="module"></script>
+  </body>
+</html>

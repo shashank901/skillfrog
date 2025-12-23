@@ -1,0 +1,36 @@
+from __future__ import annotations
+
+import os
+from dataclasses import dataclass, field
+from pathlib import Path
+from typing import Optional
+
+
+@dataclass
+class Settings:
+    """Runtime configuration for the finance advisor agent."""
+
+    app_name: str = field(default="AI Personal Finance Advisor")
+    environment: str = field(default_factory=lambda: os.getenv("ENVIRONMENT", "local"))
+    host: str = field(default_factory=lambda: os.getenv("HOST", "0.0.0.0"))
+    port: int = field(default_factory=lambda: int(os.getenv("PORT", "8001")))
+    database_url: str = field(
+        default_factory=lambda: os.getenv("DATABASE_URL", "sqlite:///./finance.db")
+    )
+    openai_api_key: Optional[str] = field(default_factory=lambda: os.getenv("OPENAI_API_KEY"))
+    model_name: str = field(default_factory=lambda: os.getenv("MODEL_NAME", "gpt-4o-mini"))
+    use_fake_llm: bool = field(default_factory=lambda: os.getenv("USE_FAKE_LLM", "1") == "1")
+    memory_window: int = field(default_factory=lambda: int(os.getenv("MEMORY_WINDOW", "5")))
+    frontend_origin: str = field(default_factory=lambda: os.getenv("FRONTEND_ORIGIN", "http://localhost:8501"))
+    log_level: str = field(default_factory=lambda: os.getenv("LOG_LEVEL", "INFO"))
+
+    data_dir: Path = field(default_factory=lambda: Path(os.getenv("DATA_DIR", "data")))
+
+    def ensure_directories(self) -> None:
+        self.data_dir.mkdir(parents=True, exist_ok=True)
+
+
+def load_settings() -> Settings:
+    settings = Settings()
+    settings.ensure_directories()
+    return settings

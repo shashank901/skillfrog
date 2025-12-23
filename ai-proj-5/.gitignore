@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.env
+research_reports.db
+streamlit.db

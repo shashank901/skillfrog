@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ai-proj-5-multi-agent-research-assistant
+  description: >
+    Multi-agent research assistant orchestrating planner, researcher, and summarizer agents via LangChain
+    to automate topic investigation, insight extraction, and reporting.
+  tags:
+    - fastapi
+    - langchain
+    - serpapi
+    - streamlit
+  links:
+    - url: https://github.com/co-intel-labs/hol-projects/tree/main/ai-proj-5
+      title: Repository
+      icon: github
+spec:
+  type: service
+  owner: ai-labs
+  lifecycle: experimental
+  system: ai-labs-portfolio

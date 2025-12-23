@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ai-proj-4-data-quality-agent
+  description: >
+    Data quality validation agent that inspects datasets for missing values, duplicates, and outliers,
+    persisting results and generating LangChain summaries for analytics pipelines.
+  tags:
+    - fastapi
+    - pandas
+    - scikit-learn
+    - langchain
+  links:
+    - url: https://github.com/co-intel-labs/hol-projects/tree/main/ai-proj-4
+      title: Repository
+      icon: github
+spec:
+  type: service
+  owner: ai-labs
+  lifecycle: experimental
+  system: ai-labs-portfolio

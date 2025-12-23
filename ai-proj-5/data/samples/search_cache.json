@@ -1,0 +1,30 @@
+{
+  "topic": "Renewable energy adoption in urban cities",
+  "queries": [
+    {
+      "query": "renewable energy adoption statistics urban areas 2024",
+      "results": [
+        {
+          "title": "IEA Urban Energy Transition Report 2024",
+          "url": "https://example.com/iea-urban-transition",
+          "snippet": "Urban centers added 35% more solar capacity in 2023, driven by incentives and declining PV costs."
+        },
+        {
+          "title": "Smart Cities Council Survey",
+          "url": "https://example.com/smart-cities-survey",
+          "snippet": "Top challenges include grid integration, financing, and regulatory alignment across municipalities."
+        }
+      ]
+    },
+    {
+      "query": "policy drivers renewable energy cities",
+      "results": [
+        {
+          "title": "UN Habitat Clean Energy Policies",
+          "url": "https://example.com/un-habitat-energy",
+          "snippet": "City-level climate action plans mandate 50% renewable procurement for municipal operations by 2030."
+        }
+      ]
+    }
+  ]
+}

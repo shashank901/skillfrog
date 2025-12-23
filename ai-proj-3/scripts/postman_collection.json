@@ -1,0 +1,64 @@
+{
+  "info": {
+    "name": "Telecom Support RAG Agent",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Sample requests for the Customer Support RAG API"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/health",
+          "host": ["{{baseUrl}}"],
+          "path": ["health"]
+        }
+      }
+    },
+    {
+      "name": "Ingest Documents",
+      "request": {
+        "method": "POST",
+        "header": [
+          {"key": "Content-Type", "value": "application/json"}
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"source_dir\": \"data/sample_faqs\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/ingest",
+          "host": ["{{baseUrl}}"],
+          "path": ["ingest"]
+        }
+      }
+    },
+    {
+      "name": "Ask Chat",
+      "request": {
+        "method": "POST",
+        "header": [
+          {"key": "Content-Type", "value": "application/json"}
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"question\": \"How do I activate international roaming?\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/chat",
+          "host": ["{{baseUrl}}"],
+          "path": ["chat"]
+        }
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8000"
+    }
+  ]
+}

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Hands-On Labs Portfolio</title>
+    <style>
+      :root {
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        color: #1c2333;
+        background: #f4f6fb;
+      }
+      body {
+        margin: 0;
+        line-height: 1.6;
+      }
+      header {
+        background: linear-gradient(135deg, #3f51b5, #2196f3);
+        color: #fff;
+        padding: 3rem 1.5rem;
+        text-align: center;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+      }
+      header p {
+        max-width: 720px;
+        margin: 1rem auto 0;
+        font-size: 1.1rem;
+      }
+      main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 2.5rem 1.5rem 4rem;
+      }
+      .projects {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      }
+      .card {
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 14px 30px rgba(31, 38, 135, 0.12);
+        padding: 1.8rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+      }
+      .card h2 {
+        margin: 0;
+        font-size: 1.4rem;
+        color: #24304d;
+      }
+      .card ul {
+        margin: 0;
+        padding-left: 1.1rem;
+      }
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      .meta span {
+        background: rgba(63, 81, 181, 0.1);
+        color: #3f51b5;
+        padding: 0.25rem 0.6rem;
+        border-radius: 0.6rem;
+        font-size: 0.85rem;
+      }
+      .actions a {
+        display: inline-block;
+        margin-right: 0.8rem;
+        color: #2196f3;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .actions a:hover {
+        text-decoration: underline;
+      }
+      section {
+        margin-top: 3.5rem;
+        background: #fff;
+        border-radius: 16px;
+        padding: 2rem;
+        box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+      }
+      section h2 {
+        margin-top: 0;
+        color: #1f2937;
+      }
+      ol li {
+        margin-bottom: 0.6rem;
+      }
+      footer {
+        text-align: center;
+        padding: 2rem 1rem 3rem;
+        color: #64748b;
+        font-size: 0.9rem;
+      }
+      @media (max-width: 680px) {
+        header h1 {
+          font-size: 2rem;
+        }
+        main {
+          padding: 2rem 1rem 3rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>AI Hands-On Labs Portfolio</h1>
+      <p>
+        Curated collection of end-to-end AI projects spanning agentic workflows, RAG systems, and
+        data validation. Each lab ships with documentation, runnable services, automated tests, Docker
+        assets, and Backstage catalog metadata for platform integration.
+      </p>
+    </header>
+    <main>
+      <div class="projects">
+        <article class="card">
+          <h2>AI Personal Finance Advisor Agent</h2>
+          <div class="meta">
+            <span>FastAPI</span>
+            <span>LangChain</span>
+            <span>SQLite</span>
+            <span>Streamlit</span>
+          </div>
+          <p>
+            Analyses income, expenses, and goals to generate personalised savings and investment guidance.
+            Includes LangChain memory, deterministic fallbacks, and a Streamlit dashboard for reviewing recommendations.
+          </p>
+          <ul>
+            <li>Backend entrypoint: <code>python ai-proj-1/main.py</code></li>
+            <li>Seed sample data: <code>python -m ai-proj-1.src.backend.ingest --seed</code></li>
+            <li>Tests: <code>pytest ai-proj-1/tests</code></li>
+          </ul>
+          <div class="actions">
+            <a href="ai-proj-1/README.md">Documentation</a>
+            <a href="ai-proj-1/catalog-info.yaml">Backstage</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>AI Code Reviewer Agent</h2>
+          <div class="meta">
+            <span>FastAPI</span>
+            <span>LangChain</span>
+            <span>GitHub API</span>
+            <span>SQLite</span>
+          </div>
+          <p>
+            Fetches Python snippets locally or from GitHub, runs heuristic + LLM analysis, and returns structured
+            issues with remediation advice. Designed for CI integration and developer dashboards.
+          </p>
+          <ul>
+            <li>Start API: <code>python ai-proj-2/main.py</code></li>
+            <li>Streamlit dashboard: <code>streamlit run ai-proj-2/streamlit_app.py</code></li>
+            <li>Tests: <code>pytest ai-proj-2/tests</code></li>
+          </ul>
+          <div class="actions">
+            <a href="ai-proj-2/README.md">Documentation</a>
+            <a href="ai-proj-2/catalog-info.yaml">Backstage</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Customer Support RAG Agent</h2>
+          <div class="meta">
+            <span>FastAPI</span>
+            <span>LangChain</span>
+            <span>ChromaDB</span>
+            <span>HTML UI</span>
+          </div>
+          <p>
+            Retrieval-augmented agent for telecom FAQs powered by LangChain + Chroma.
+            Provides ingestion pipeline, fallback embeddings/LLM path, latency tests, and a simple web chat interface.
+          </p>
+          <ul>
+            <li>Serve API/UI: <code>python ai-proj-3/main.py</code></li>
+            <li>Ingest sample docs: <code>python -m ai-proj-3.src.backend.ingest --source ai-proj-3/data/sample_faqs</code></li>
+            <li>Tests: <code>pytest ai-proj-3/tests</code></li>
+          </ul>
+          <div class="actions">
+            <a href="ai-proj-3/README.md">Documentation</a>
+            <a href="ai-proj-3/catalog-info.yaml">Backstage</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>AI Data Quality Validation Agent</h2>
+          <div class="meta">
+            <span>FastAPI</span>
+            <span>Pandas</span>
+            <span>Scikit-learn</span>
+            <span>LangChain</span>
+          </div>
+          <p>
+            Automates dataset quality checks (missing data, duplicates, outliers) and generates narrative
+            summaries via LangChain. Ships with notebook walkthrough, Streamlit UI, and customizable thresholds.
+          </p>
+          <ul>
+            <li>Launch validator API: <code>python ai-proj-4/main.py</code></li>
+            <li>Explore data: open <code>ai-proj-4/notebooks/data_quality_walkthrough.ipynb</code></li>
+            <li>Tests: <code>pytest ai-proj-4/tests</code></li>
+          </ul>
+          <div class="actions">
+            <a href="ai-proj-4/README.md">Documentation</a>
+            <a href="ai-proj-4/catalog-info.yaml">Backstage</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Multi-Agent Research Assistant</h2>
+          <div class="meta">
+            <span>FastAPI</span>
+            <span>LangChain</span>
+            <span>SerpAPI</span>
+            <span>Streamlit</span>
+          </div>
+          <p>
+            Planner, Researcher, and Summarizer agents collaborate to investigate any topic, consolidate web
+            findings, and surface structured insights with citations, backed by optional SerpAPI search.
+          </p>
+          <ul>
+            <li>Run API: <code>python ai-proj-5/main.py</code></li>
+            <li>Streamlit UI: <code>streamlit run ai-proj-5/streamlit_app.py</code></li>
+            <li>Tests: <code>pytest ai-proj-5/tests</code></li>
+          </ul>
+          <div class="actions">
+            <a href="ai-proj-5/README.md">Documentation</a>
+            <a href="ai-proj-5/catalog-info.yaml">Backstage</a>
+          </div>
+        </article>
+      </div>
+
+      <section>
+        <h2>Adding a New Lab</h2>
+        <ol>
+          <li>Create a new project folder at the root (e.g., <code>ai-proj-5</code>) following the existing structure.</li>
+          <li>Author the lab using the universal template and include README, code, tests, Docker assets, and <code>catalog-info.yaml</code>.</li>
+          <li>Update this <code>index.html</code> by duplicating a project card and adjusting the content.</li>
+          <li>Run <code>pytest &lt;project&gt;/tests</code> to ensure clean test results.</li>
+          <li>Commit the project folder and <code>index.html</code>, then push to the repository.</li>
+        </ol>
+      </section>
+    </main>
+    <footer>
+      Maintained by the AI Labs team — streamline delivery by registering each component in Backstage.
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ai-proj-3-customer-support-rag
+  description: >
+    Retrieval-augmented support agent for telecom FAQs using LangChain, ChromaDB, and FastAPI with optional
+    deterministic embeddings/LLM fallbacks and HTML chat client.
+  tags:
+    - fastapi
+    - rag
+    - langchain
+    - chromadb
+  links:
+    - url: https://github.com/co-intel-labs/hol-projects/tree/main/ai-proj-3
+      title: Repository
+      icon: github
+spec:
+  type: service
+  owner: ai-labs
+  lifecycle: experimental
+  system: ai-labs-portfolio
